@@ -211,15 +211,15 @@ int main(int argc, char **argv)
 		for (int ticks = 0; ticks < (int)(seq_time[i] * rate); ticks++)
 			add_freq(seq_freq[i]);
 
-  for (int y = 0; y < 120; y++) {
-		  hor_sync();
-			for (int x = 0; x < 160; x++) {
-				if (x%2 == 0) {
-					draw_black();
-				} else {
-					draw_white();
-				}
+        for (int y = 0; y < 120; y++) {
+		hor_sync();
+		for (int x = 0; x < 160; x++) {
+			if (x%2 == 0) {
+				draw_black();
+			} else {
+				draw_white();
 			}
+		}
 	}
 
 	while (add_sample(0.0));
